@@ -1,0 +1,406 @@
+.form {
+	font-family: var(--font-accent);
+	background-color: var(--accent);
+	position: relative;
+	width: 100vw;
+	max-width: 1600px;
+	padding: 50px 15px;
+
+	@include mobile {
+		padding: 35px 10px;
+	}
+
+	&__title {
+		position: relative;
+		font-weight: 600;
+		font-size: 80px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 auto;
+		color: var(--text-color);
+		padding: 10px 20px;
+		width: fit-content;
+		white-space: nowrap;
+		margin-bottom: 40px;
+
+		@include mobile {
+			font-size: 30px;
+			margin-bottom: 20px;
+			padding: 10px 10px;
+		}
+	}
+
+	.rect {
+		position: absolute;
+		width: 90px;
+		height: 20px;
+		border: 1px solid var(--text-color);
+
+		@include mobile {
+			width: 35px;
+			height: 10px;
+			// border: 2px solid var(--text-color);
+		}
+
+		&-top {
+			&-left {
+				top: 0;
+				left: 0;
+				border-bottom: none;
+				border-right: none;
+			}
+
+			&-mid {
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				border-bottom: none;
+				border-left: none;
+				border-right: none;
+			}
+
+			&-right {
+				top: 0;
+				right: 0;
+				left: auto;
+				border-bottom: none;
+				border-left: none;
+			}
+		}
+
+		&-bottom {
+			&-left {
+				bottom: 0;
+				left: 0;
+				border-top: none;
+				border-right: none;
+			}
+
+			&-mid {
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				border-top: none;
+				border-left: none;
+				border-right: none;
+			}
+
+			&-right {
+				bottom: 0;
+				right: 0;
+				left: auto;
+				border-top: none;
+				border-left: none;
+			}
+		}
+	}
+
+	.text {
+		max-width: 224px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-align: center;
+		color: var(--text-color);
+		margin: 0 auto;
+		margin-bottom: 40px;
+
+		@include mobile {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.contact__form {
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		max-width: 548px;
+		margin: 0 auto;
+		border: 1px solid var(--page-bg);
+		gap: 10px;
+
+		@include mobile {
+			padding: 20px;
+		}
+
+		& input,
+		textarea {
+			font-family: var(--font-accent);
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			color: var(--text-color-dark);
+			background-color: var(--page-bg);
+			padding: 10px 20px;
+			resize: none;
+			border: none;
+			outline: none;
+
+			@include mobile {
+				padding: 12px;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&::placeholder {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 110%;
+				letter-spacing: -0.04em;
+				color: rgba(124, 0, 0, 0.5);
+			}
+		}
+
+		& textarea {
+			height: 88px;
+		}
+
+		&-text {
+			color: rgba(255, 255, 255, 0.5);
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			letter-spacing: -0.04em;
+
+			@include mobile {
+				font-size: 12px;
+			}
+
+			& a {
+				cursor: pointer;
+				color: rgba(255, 255, 255, 0.5);
+				transition: color 0.2s ease-in;
+
+				&:hover {
+					color: var(--text-color);
+				}
+			}
+		}
+	}
+
+	.bars_right {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+
+		.bar {
+			width: 100%;
+			position: absolute;
+			background-color: red;
+			background-color: var(--page-bg);
+			height: 100%;
+
+			&_1 {
+				width: 20px;
+				right: 12%;
+			}
+
+			&_2 {
+				width: 16px;
+				right: 6%;
+			}
+
+			&_3 {
+				width: 8px;
+				right: 2%;
+			}
+
+			&_4 {
+				width: 4px;
+				right: 0%;
+			}
+		}
+	}
+
+	.bars_left {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+
+		.bar {
+			width: 100%;
+			position: absolute;
+			background-color: red;
+			background-color: var(--page-bg);
+			height: 100%;
+
+			&_5 {
+				width: 20px;
+				left: 12%;
+			}
+
+			&_6 {
+				width: 16px;
+				left: 6%;
+			}
+
+			&_7 {
+				width: 8px;
+				left: 2%;
+			}
+
+			&_8 {
+				width: 4px;
+				left: 0%;
+			}
+		}
+	}
+
+	.bars_right {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+
+		.bar {
+			width: 100%;
+			position: absolute;
+			background-color: red;
+			background-color: var(--page-bg);
+			height: 100%;
+
+			&_1 {
+				width: 20px;
+				right: 12%;
+			}
+
+			&_2 {
+				width: 16px;
+				right: 6%;
+			}
+
+			&_3 {
+				width: 8px;
+				right: 2%;
+			}
+
+			&_4 {
+				width: 4px;
+				right: 0%;
+			}
+		}
+	}
+
+	.bars_left {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+
+		.bar {
+			width: 100%;
+			position: absolute;
+			background-color: red;
+			background-color: var(--page-bg);
+			height: 100%;
+
+			&_5 {
+				width: 20px;
+				left: 12%;
+			}
+
+			&_6 {
+				width: 16px;
+				left: 6%;
+			}
+
+			&_7 {
+				width: 8px;
+				left: 2%;
+			}
+
+			&_8 {
+				width: 4px;
+				left: 0%;
+			}
+		}
+	}
+
+	.form__btn {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-self: end;
+		position: relative;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		height: 40px;
+		color: var(--accent);
+		// background-color: var(--page-bg);
+		padding: 0;
+		width: 100%;
+		max-width: 469px;
+		margin-top: 20px;
+
+		@include mobile_small {
+			margin-top: 10px;
+		}
+
+		&:hover {
+			.bars_right {
+				.bar_1 {
+					animation: bars_right 4s infinite;
+				}
+
+				.bar_2 {
+					animation: bars_right 4s infinite;
+					animation-delay: -1s;
+				}
+
+				.bar_3 {
+					animation: bars_right 4s infinite;
+					animation-delay: -2s;
+				}
+
+				.bar_4 {
+					animation: bars_right 4s infinite;
+					animation-delay: -3s;
+				}
+			}
+
+			.bars_left {
+				.bar_5 {
+					animation: bars_left 4s infinite;
+				}
+
+				.bar_6 {
+					animation: bars_left 4s infinite;
+					animation-delay: -1s;
+				}
+
+				.bar_7 {
+					animation: bars_left 4s infinite;
+					animation-delay: -2s;
+				}
+
+				.bar_8 {
+					animation: bars_left 4s infinite;
+					animation-delay: -3s;
+				}
+			}
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40px;
+			width: 100%;
+			max-width: 300px;
+			background-color: var(--page-bg);
+
+			@include mobile {
+				max-width: 260px;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+<section class="form container" id="form">
+	<h2 class="form__title">
+		<div class="rect rect-top-left"></div>
+		<div class="rect rect-top-mid"></div>
+		<div class="rect rect-top-right"></div>
+		<p>Send us an email</p>
+		<div class="rect rect-bottom-left"></div>
+		<div class="rect rect-bottom-mid"></div>
+		<div class="rect rect-bottom-right"></div>
+	</h2>
+
+	<div class="text">
+		Get in touch: we’re here to help! We’d love to hear from you.
+	</div>
+
+	<form class="contact__form" action="../../php/thanks_form.php" method="post">
+		<input type="text" name="name" placeholder="Name" required>
+		<input type="email" name="email" placeholder="E-mail" required>
+		<input type="phone" name="phone" placeholder="Phone" required>
+		<textarea name="message" placeholder="Message" required></textarea>
+		<div class="contact__form-text">By clicking the "Send Message" button, you confirm your consent to the processing of
+			personal data
+			and agree to the <a href="privacy-policy.html">privacy policy</a></div>
+
+		<button href="#!" class="form__btn" type="submit">
+			<div class="bars_left">
+				<div class="bar bar_8"></div>
+				<div class="bar bar_7"></div>
+				<div class="bar bar_6"></div>
+				<div class="bar bar_5"></div>
+			</div>
+			<span class="form__btn-text">
+				Send the message
+			</span>
+			<div class="bars_right">
+				<div class="bar bar_1"></div>
+				<div class="bar bar_2"></div>
+				<div class="bar bar_3"></div>
+				<div class="bar bar_4"></div>
+			</div>
+		</button>
+	</form>
+
+</section>

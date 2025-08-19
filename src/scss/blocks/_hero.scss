@@ -1,0 +1,295 @@
+.hero {
+	font-family: var(--font-accent);
+	position: relative;
+	width: 100vw;
+	max-width: 1600px;
+	padding: 0;
+	margin: 0 auto;
+	margin-top: -80px;
+	overflow: hidden;
+
+	.container {
+		padding: 130px 15px;
+		padding-bottom: 0px;
+		background-color: var(--accent);
+		background-color: #999;
+		background-image: url('../../img/hero/hero.jpg');
+		background-position: center center;
+		/* x y */
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include mobile {
+			padding: 100px 10px;
+			padding-bottom: 0px;
+		}
+	}
+
+	.title__wrapper {
+		position: relative;
+		z-index: 3;
+		max-width: 100%;
+		margin: 0 auto;
+
+		@include tablet {
+			max-width: 80%;
+		}
+
+		@include mobile {
+			max-width: 100%;
+		}
+
+		@include mobile_small {
+			max-width: 80%;
+		}
+
+		@media (max-width: 360px) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: 177px;
+		font-size: clamp(65px, 11vw, 177px);
+		line-height: 70%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		text-align: center;
+		color: #faa;
+		position: relative;
+		width: 100%;
+		white-space: nowrap;
+		mix-blend-mode: difference;
+
+		text-align: center;
+		z-index: 3;
+
+		@include tablet {
+			line-height: 90%;
+			white-space: normal;
+			text-align: center;
+			bottom: -10px;
+		}
+
+		@include mobile {
+			bottom: -6px;
+		}
+
+		@include mobile_small {
+			bottom: -4px;
+		}
+	}
+
+	.subtitle__wrapper {
+		background-color: var(--page-bg);
+		color: var(--text-color-dark);
+		width: 100%;
+		max-width: 469px;
+		justify-self: end;
+		padding: 20px;
+
+		@include mobile {
+			padding: 10px;
+		}
+
+		&-border {
+			border: 1px solid rgba(124, 0, 0, 0.6);
+			padding: 40px;
+
+			@include mobile {
+				padding: 20px;
+			}
+		}
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+
+		&-description {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			word-break: normal;
+			width: 100%;
+
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+
+		@include mobile {
+			font-size: 25px;
+		}
+	}
+
+	.bars_right {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+
+		.bar {
+			width: 100%;
+			position: absolute;
+			background-color: red;
+			background-color: var(--page-bg);
+			height: 100%;
+
+			&_1 {
+				width: 20px;
+				right: 12%;
+			}
+
+			&_2 {
+				width: 16px;
+				right: 6%;
+			}
+
+			&_3 {
+				width: 8px;
+				right: 2%;
+			}
+
+			&_4 {
+				width: 4px;
+				right: 0%;
+			}
+		}
+	}
+
+	.bars_left {
+		position: absolute;
+		height: 40px;
+		width: 100%;
+
+		.bar {
+			width: 100%;
+			position: absolute;
+			background-color: red;
+			background-color: var(--page-bg);
+			height: 100%;
+
+			&_5 {
+				width: 20px;
+				left: 12%;
+			}
+
+			&_6 {
+				width: 16px;
+				left: 6%;
+			}
+
+			&_7 {
+				width: 8px;
+				left: 2%;
+			}
+
+			&_8 {
+				width: 4px;
+				left: 0%;
+			}
+		}
+	}
+
+	.hero__btn {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-self: end;
+		position: relative;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		height: 40px;
+		color: var(--accent);
+		// background-color: var(--page-bg);
+		padding: 0;
+		width: 100%;
+		max-width: 469px;
+		margin-top: 40px;
+		margin-bottom: 158px;
+
+		@include mobile {
+			margin-top: 20px;
+		}
+
+		&:hover {
+			.bars_right {
+				.bar_1 {
+					animation: bars_right 4s infinite;
+				}
+
+				.bar_2 {
+					animation: bars_right 4s infinite;
+					animation-delay: -1s;
+				}
+
+				.bar_3 {
+					animation: bars_right 4s infinite;
+					animation-delay: -2s;
+				}
+
+				.bar_4 {
+					animation: bars_right 4s infinite;
+					animation-delay: -3s;
+				}
+			}
+
+			.bars_left {
+				.bar_5 {
+					animation: bars_left 4s infinite;
+				}
+
+				.bar_6 {
+					animation: bars_left 4s infinite;
+					animation-delay: -1s;
+				}
+
+				.bar_7 {
+					animation: bars_left 4s infinite;
+					animation-delay: -2s;
+				}
+
+				.bar_8 {
+					animation: bars_left 4s infinite;
+					animation-delay: -3s;
+				}
+			}
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40px;
+			width: 100%;
+			max-width: 300px;
+			background-color: var(--page-bg);
+
+			@include mobile {
+				max-width: 260px;
+			}
+		}
+
+		@include mobile {
+			margin-bottom: 100px;
+		}
+	}
+
+	.mobileHide {
+		display: none;
+
+		@include mobile {
+			display: block;
+		}
+	}
+}

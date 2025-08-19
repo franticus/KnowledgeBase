@@ -1,0 +1,233 @@
+.spin {
+	font-family: var(--font-accent);
+	position: relative;
+	width: 100vw;
+	max-width: 1600px;
+	padding: 0 15px;
+
+	@include mobile {
+		padding: 0px 10px;
+	}
+
+	&_grid {
+		display: grid;
+		// max-height: 680px;
+		padding-top: 130px;
+		padding-bottom: 70px;
+		grid-template-columns: repeat(10, 1fr);
+
+		@include tablet {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	}
+
+	.title__wrapper {
+		position: relative;
+		z-index: 3;
+		max-width: 100%;
+		margin: 0 auto;
+
+		@include tablet {
+			max-width: 80%;
+		}
+
+		@include mobile {
+			max-width: 100%;
+		}
+
+		@include mobile_small {
+			max-width: 80%;
+		}
+
+		@media (max-width: 360px) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		font-family: var(--font-second);
+		font-weight: 800;
+		font-size: 907px;
+		font-size: clamp(173px, 50vw, 907px);
+		line-height: 100%;
+		// letter-spacing: -0.04em;
+		font-optical-sizing: none;
+		font-kerning: none;
+		font-variant-ligatures: none;
+		font-feature-settings: "kern" 0, "liga" 0;
+		text-transform: uppercase;
+		text-align: center;
+		color: #faa;
+		width: 100%;
+		white-space: nowrap;
+
+		color: var(--accent-light);
+		margin: 0 auto;
+		text-align: center;
+		z-index: 1;
+
+		@include tablet {
+			position: static;
+			top: auto;
+			left: auto;
+			transform: none;
+			line-height: 100%;
+			text-align: center;
+		}
+	}
+
+	.text_1 {
+		color: var(--page-bg);
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		grid-column: 1 / 7;
+		grid-row: 1;
+		// margin-top: 180px;
+		margin-bottom: 40px;
+		position: relative;
+		z-index: 3;
+
+		&-first,
+		&-second,
+		&-third {
+			display: inline;
+			background: var(--accent);
+			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+			padding: 4px;
+		}
+
+		@include tablet {
+			grid-column: 1 / -1;
+			grid-row: 1;
+			margin-bottom: 20px;
+			line-height: normal;
+		}
+
+		@include mobile {
+			margin-top: -70px;
+			font-size: 16px;
+		}
+	}
+
+	.text_2 {
+		color: var(--page-bg);
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		grid-column: 3 / -1;
+		grid-row: 2;
+		position: relative;
+		z-index: 3;
+
+		&-first,
+		&-second {
+			display: inline;
+			background: var(--accent);
+			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+			padding: 4px;
+		}
+
+		@include tablet {
+			grid-column: 1 / -1;
+			grid-row: 2;
+			line-height: normal;
+		}
+
+		@include mobile {
+			font-size: 16px;
+		}
+	}
+
+	.text_3 {
+		position: relative;
+		z-index: 3;
+		background-color: var(--page-bg);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		grid-column: 1 / -1;
+		grid-row: 3;
+		margin: 0 auto;
+		margin-top: 90px;
+		margin-bottom: 20px;
+		color: var(--text-color-dark);
+		padding: 20px;
+		width: 100%;
+		max-width: 413px;
+		border: 1px solid rgba(124, 0, 0, 0.4);
+
+		.border {
+			border: 1px solid rgba(124, 0, 0, 0.6);
+			padding: 20px;
+
+			@include mobile {
+				padding: 10px;
+			}
+		}
+
+		@include tablet {
+			grid-column: 1 / -1;
+			grid-row: 3;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+
+		@include mobile {
+			font-size: 14px;
+			padding: 10px;
+		}
+	}
+
+	.text_4 {
+		position: relative;
+		z-index: 3;
+		background-color: var(--page-bg);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		grid-column: 1 / -1;
+		grid-row: 4;
+		margin: 0 auto;
+		// margin-bottom: 140px;
+		color: var(--text-color-dark);
+		padding: 20px;
+		width: 100%;
+		max-width: 413px;
+		border: 1px solid rgba(124, 0, 0, 0.4);
+
+		.border {
+			border: 1px solid rgba(124, 0, 0, 0.6);
+			padding: 20px;
+
+			@include mobile {
+				padding: 10px;
+			}
+		}
+
+		@include tablet {
+			grid-column: 1 / -1;
+			grid-row: 4;
+			margin-bottom: 20px;
+		}
+
+		@include mobile {
+			font-size: 14px;
+			padding: 10px;
+		}
+	}
+}

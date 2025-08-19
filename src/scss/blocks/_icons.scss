@@ -1,0 +1,35 @@
+.icons-wrapper {
+	padding: 30px 0;
+	display: flex;
+	column-gap: 30px;
+}
+
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 24px;
+	height: 24px;
+}
+
+.icon--icon_facebook,
+.icon--icon_instagram,
+.icon--icon_son,
+.icon--icon_x {
+	fill: var(--accent-dark);
+	stroke: var(--accent-dark);
+}
+
+.icon--icon_download {
+	fill: var(--accent);
+	stroke: var(--accent);
+	width: 15px;
+	height: 15px;
+	opacity: 0.6;
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+	margin-left: 10px;
+
+	&:hover {
+		opacity: 1;
+	}
+}
