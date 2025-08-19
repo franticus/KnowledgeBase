@@ -1,3 +1,3 @@
-# SpinVibe
+# KnowledgeBase
 
-[Deploy SpinVibe](https://franticus.github.io/SpinVibe/)
+[Deploy SpinVibe](https://franticus.github.io/KnowledgeBase/)
