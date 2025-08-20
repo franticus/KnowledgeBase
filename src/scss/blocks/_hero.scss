@@ -17,8 +17,7 @@
 		background-repeat: no-repeat;
 
 		@include mobile {
-			padding: 100px 10px;
-			padding-bottom: 0px;
+			padding: 140px 10px;
 		}
 	}
 
@@ -30,9 +29,13 @@
 		text-align: center;
 		color: var(--text-color);
 		margin-bottom: 60px;
-	}
 
-	.main__button {
-		margin-bottom: 300px;
+		@include tablet {
+			font-size: 80px;
+		}
+
+		@include mobile {
+			font-size: 35px;
+		}
 	}
 }
