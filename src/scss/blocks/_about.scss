@@ -6,6 +6,51 @@
 	border-top-left-radius: 100px;
 	border-top-right-radius: 100px;
 	margin-top: -250px;
+
+	.content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		color: var(--text-color-dark);
+
+		.text {
+			grid-column: 3 / -1;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 105%;
+			margin-bottom: 10px;
+		}
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		grid-column: 3 / -1;
+	}
+
+	.card {
+		padding: 30px 0;
+		border-bottom: 1px solid rgba(18, 18, 18, 0.4);
+		max-width: 95%;
+
+		&:last-child {
+			max-width: 100%;
+		}
+
+		&__title {
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 105%;
+			margin-bottom: 4px;
+		}
+
+		&__text {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 105%;
+			color: rgba(18, 18, 18, 0.4);
+		}
+	}
 }
 
 .title__wrapper {
