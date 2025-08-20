@@ -12,7 +12,7 @@
 	}
 }
 
-@mixin media_900 () {
+@mixin tablet_small () {
 	@media (max-width: 900px) {
 		@content;
 	}

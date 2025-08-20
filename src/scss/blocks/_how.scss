@@ -107,7 +107,7 @@
 			justify-content: space-between;
 			gap: 10px;
 
-			@include media_900 {
+			@include tablet_small {
 				flex-direction: column;
 				gap: 10px;
 				margin-top: 0px;
@@ -119,14 +119,14 @@
 			justify-content: center;
 			gap: 10px;
 
-			@include media_900 {
+			@include tablet_small {
 				flex-direction: column;
 				gap: 10px;
 				margin-top: 0px;
 			}
 		}
 
-		@include media_900 {
+		@include tablet_small {
 			flex-direction: column;
 			gap: 10px;
 			margin-top: 0px;
@@ -136,7 +136,7 @@
 			display: flex;
 			gap: 10px;
 
-			@include media_900 {
+			@include tablet_small {
 				flex-direction: column;
 				align-items: center;
 				gap: 20px;
@@ -170,7 +170,7 @@
 				width: fit-content;
 				max-width: 439px;
 
-				@include media_900 {
+				@include tablet_small {
 					flex-direction: column;
 					gap: 10px;
 					margin-top: 0px;
