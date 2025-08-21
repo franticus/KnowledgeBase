@@ -39,11 +39,34 @@
 			position: relative;
 			width: 100%;
 			aspect-ratio: 4 / 3.2;
-			overflow: hidden;
 			margin-bottom: 20px;
+			overflow: hidden;
+			border-radius: 90px;
+
+			&.blue {
+				border: 1px solid #0F6DA7;
+			}
+
+			&.red {
+				border: 1px solid #E87594;
+			}
+
+			&.green {
+				border: 1px solid #0DC1C2;
+			}
+
+			@include tablet {
+				border-radius: 70px;
+			}
 
 			@include mobile {
 				margin-bottom: 15px;
+				border-radius: 50px;
+			}
+
+			@include mobile_small {
+				margin-bottom: 15px;
+				border-radius: 30px;
 			}
 		}
 
@@ -52,7 +75,6 @@
 			inset: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
 			display: block;
 			transition: opacity 0.35s ease;
 
