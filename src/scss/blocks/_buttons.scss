@@ -37,4 +37,16 @@
 			border: 1px solid var(--text-color);
 		}
 	}
+
+	&.transparent {
+		color: var(--text-color-dark);
+		background-color: var(--page-bg);
+		border: 1px solid var(--text-color);
+
+		&:hover {
+			color: var(--text-color);
+			background-color: transparent;
+			border: 1px solid var(--text-color);
+		}
+	}
 }

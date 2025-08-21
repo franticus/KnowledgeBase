@@ -68,97 +68,13 @@
 	}
 }
 
-@keyframes wave {
+@keyframes upDown {
 	0% {
-		width: 124%;
-		opacity: 0;
-	}
-
-	10% {
-		opacity: 1;
+		transform: translateY(-20px);
 	}
 
 	100% {
-		width: 240%;
-		opacity: 0;
-	}
-}
-
-@keyframes waveTablet {
-	0% {
-		width: 100%;
-		opacity: 0;
-	}
-
-	10% {
-		opacity: 1;
-	}
-
-	100% {
-		width: 200%;
-		opacity: 0;
-	}
-}
-
-@keyframes waveMobile {
-	0% {
-		width: 70%;
-		opacity: 0;
-	}
-
-	10% {
-		opacity: 1;
-	}
-
-	100% {
-		width: 200%;
-		opacity: 0;
-	}
-}
-
-@keyframes bars_right {
-	0% {
-		opacity: 0;
-		width: 30px;
-		right: 12%;
-	}
-
-	30% {
-		opacity: 1;
-		width: 18px;
-	}
-
-	70% {
-		opacity: 1;
-	}
-
-	100% {
-		width: 0px;
-		right: 0%;
-		opacity: 0;
-	}
-}
-
-@keyframes bars_left {
-	0% {
-		opacity: 0;
-		width: 30px;
-		left: 12%;
-	}
-
-	30% {
-		opacity: 1;
-		width: 18px;
-	}
-
-	70% {
-		opacity: 1;
-	}
-
-	100% {
-		width: 0px;
-		left: 0%;
-		opacity: 0;
+		transform: translateY(20px);
 	}
 }
 

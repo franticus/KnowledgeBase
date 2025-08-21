@@ -8,7 +8,7 @@
 	overflow: hidden;
 
 	.container {
-		padding: 150px 100px 300px 100px;
+		padding: 150px 100px 100px 100px;
 		background-color: var(--accent);
 		background-color: #999;
 		background-image: url('../../img/hero/hero.jpg');
@@ -17,9 +17,20 @@
 		background-repeat: no-repeat;
 
 		@include mobile {
-			padding: 140px 10px;
-			padding-bottom: 200px;
+			padding: 140px 10px 90px 10px;
 		}
+	}
+
+	&__line {
+		height: 78px;
+		width: 1px;
+		background: #f7f6f2;
+		margin: 0 auto;
+		margin-top: 60px;
+		margin-bottom: 70px;
+
+		animation: upDown 2s infinite ease-in-out;
+		animation-direction: alternate;
 	}
 
 	&__title {
@@ -33,10 +44,12 @@
 
 		@include tablet {
 			font-size: 80px;
+			margin-bottom: 40px;
 		}
 
 		@include mobile {
 			font-size: 35px;
+			margin-bottom: 20px;
 		}
 	}
 }
