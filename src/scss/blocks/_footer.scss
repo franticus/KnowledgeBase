@@ -321,6 +321,11 @@
 			line-height: 105%;
 			color: rgba(247, 246, 242, 0.6);
 			padding: 4px;
+
+			@include mobile {
+				font-size: 12px;
+				padding: 4px 0;
+			}
 		}
 
 		& .footer__link-logo:hover {
