@@ -23,7 +23,7 @@
 	&:hover {
 		color: var(--text-color);
 		background-color: var(--text-color-dark);
-		border: 1px solid var(--text-color-dark);
+		border: 1px solid var(--text-color);
 	}
 
 	&.secondary {
@@ -34,7 +34,7 @@
 		&:hover {
 			color: var(--text-color);
 			background-color: var(--text-color-dark);
-			border: 1px solid var(--text-color-dark);
+			border: 1px solid var(--text-color);
 		}
 	}
 }

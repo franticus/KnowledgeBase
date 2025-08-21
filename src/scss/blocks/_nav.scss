@@ -44,6 +44,26 @@
 		background-color: var(--page-bg);
 		color: var(--text-color-dark);
 	}
+
+	&-first:hover {
+		background-color: #0DC1C2;
+		color: var(--text-color-dark);
+	}
+
+	&-second:hover {
+		background-color: #0F6DA7;
+		color: var(--text-color-dark);
+	}
+
+	&-third:hover {
+		background-color: #E87594;
+		color: var(--text-color-dark);
+	}
+
+	&-fourth:hover {
+		background-color: #FFE26A;
+		color: var(--text-color-dark);
+	}
 }
 
 .nav__btn {
