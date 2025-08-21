@@ -103,7 +103,7 @@
 	}
 
 	& .footer__link {
-		grid-column: 4;
+		grid-column: 3;
 		width: fit-content;
 		display: inline-block;
 		font-weight: 500;
@@ -120,6 +120,7 @@
 
 		@include tablet {
 			justify-self: end;
+			grid-column: 4;
 		}
 
 		@include mobile {
