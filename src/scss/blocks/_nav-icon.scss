@@ -84,10 +84,8 @@
 .mobile-nav-btn {
 	z-index: 999;
 	display: none;
-}
 
-@include tablet {
-	.mobile-nav-btn {
+	@include tablet {
 		display: block;
 	}
 }

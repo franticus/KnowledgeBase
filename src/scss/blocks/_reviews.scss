@@ -18,26 +18,37 @@
 		&__control {
 			position: absolute;
 			bottom: 0;
-			right: 100px;
+			right: 0;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			justify-self: end;
 			grid-column: 4;
-			height: 26px;
+			z-index: 9;
 
 			&--next {
-				transform: rotate(180deg);
-				height: 21px;
+				transform: scale(-1, 1);
 				margin-left: 60px;
 			}
+
+			@include mobile_small {
+				display: none;
+			}
+		}
+
+		@include mobile_small {
+			display: none;
 		}
 	}
 
 	.slide__wrapper {
 		grid-column: 3 / -1;
 		overflow: hidden;
+
+		@include mobile {
+			grid-column: 1 / -1;
+		}
 	}
 
 	.slide {
@@ -49,10 +60,25 @@
 			font-size: 25px;
 			line-height: 105%;
 			color: rgba(18, 18, 18, 0.7);
+
+			@include mobile {
+				font-size: 16px;
+			}
 		}
 
 		&__img {
 			margin: 40px 0 20px 0;
+			width: 100%;
+
+			& img {
+				@include mobile_small {
+					width: 100%;
+				}
+			}
+
+			@include mobile_small {
+				margin: 15px 0 10px 0;
+			}
 		}
 
 		&__name {
@@ -61,6 +87,12 @@
 			line-height: 105%;
 			text-transform: uppercase;
 			color: var(--text-color-dark);
+			margin-bottom: 10px;
+
+			@include mobile_small {
+				font-size: 16px;
+				margin-bottom: 5px;
+			}
 		}
 
 		&__role {
@@ -68,23 +100,59 @@
 			font-size: 16px;
 			line-height: 105%;
 			color: rgba(18, 18, 18, 0.4);
+
+			@include mobile_small {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.slider__mobile {
+		display: none;
+		padding-left: 10px;
+
+		@include mobile_small {
+			display: flex;
+			flex-direction: row;
+			gap: 15px;
+
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.slide__wrapper {
+			display: flex;
+			flex-direction: row;
+			gap: 15px;
+			padding-right: 10px;
+		}
+
+		.slide {
+			flex: 0 0 auto;
+			width: 90%;
+			max-width: 280px;
+			scroll-snap-align: start;
+			background: #fff;
+			border-radius: 10px;
 		}
 	}
 }
 
-/* контейнер стоит на месте, обрезает лишнее */
 .reviews .slide__wrapper {
 	overflow: hidden;
 	position: relative;
+
+	@include mobile_small {
+		overflow-x: scroll;
+	}
 }
 
-/* лента внутри */
 .reviews .slides-track {
 	display: flex;
 	will-change: transform;
 }
 
-/* один видимый слайд на ширину обёртки */
 .reviews .slide {
 	flex: 0 0 100%;
 }
