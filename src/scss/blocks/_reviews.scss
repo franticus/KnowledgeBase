@@ -71,3 +71,20 @@
 		}
 	}
 }
+
+/* контейнер стоит на месте, обрезает лишнее */
+.reviews .slide__wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+/* лента внутри */
+.reviews .slides-track {
+	display: flex;
+	will-change: transform;
+}
+
+/* один видимый слайд на ширину обёртки */
+.reviews .slide {
+	flex: 0 0 100%;
+}
