@@ -25,8 +25,12 @@
 				box-sizing: border-box;
 			}
 
+			html {
+				background-color: #fff;
+			}
+
 			body {
-				font-family: "Inter", sans-serif;
+				font-family: var(--font-accent);
 				display: flex;
 				flex-direction: column;
 				align-items: center;
@@ -34,29 +38,30 @@
 				height: 100vh;
 				margin: 0;
 				text-align: center;
-				background-color: #7c0000;
+				background-color: #ffe26a;
+				border-radius: 90px;
 			}
 
 			h1 {
-				font-family: "Inter", sans-serif;
+				font-family: var(--font-accent);
 				font-weight: 600;
 				font-size: 40px;
 				line-height: 110%;
 				letter-spacing: -0.04em;
 				text-transform: uppercase;
 				text-align: center;
-				color: #7c0000;
+				color: var(--text-color-dark);
 				margin-bottom: 20px;
 			}
 
 			p {
 				font-family: "Inter", sans-serif;
 				font-weight: 400;
-				font-size: 16px;
+				font-size: 25px;
 				line-height: 110%;
 				letter-spacing: -0.04em;
 				text-align: center;
-				color: #7c0000;
+				color: #59502c;
 			}
 
 			a {
@@ -65,114 +70,18 @@
 
 			.border_wrapper {
 				padding: 20px;
-				background-color: #fff;
 				width: calc(100% - 20px);
 				max-width: 469px;
 			}
 
 			.border {
-				border: 1px solid #7c0000;
+				border: 1px solid VAR(--TEXT-COLOR-DARK);
 				padding: 40px;
 			}
 
-			.bars_right {
-				position: absolute;
-				height: 40px;
-				width: 100%;
-			}
-
-			.bar {
-				width: 100%;
-				position: absolute;
-				background-color: red;
-				background-color: #fff;
-				height: 100%;
-			}
-
-			.bar_1 {
-				width: 20px;
-				right: 12%;
-			}
-
-			.bar_2 {
-				width: 16px;
-				right: 6%;
-			}
-
-			.bar_3 {
-				width: 8px;
-				right: 2%;
-			}
-
-			.bar_4 {
-				width: 4px;
-				right: 0%;
-			}
-
-			.bars_left {
-				position: absolute;
-				height: 40px;
-				width: 100%;
-			}
-
-			.bar_5 {
-				width: 20px;
-				left: 12%;
-			}
-
-			.bar_6 {
-				width: 16px;
-				left: 6%;
-			}
-
-			.bar_7 {
-				width: 8px;
-				left: 2%;
-			}
-
-			.bar_8 {
-				width: 4px;
-				left: 0%;
-			}
-
-			.white__btn {
-				position: relative;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				justify-self: end;
-				font-weight: 500;
-				font-size: 16px;
-				line-height: 100%;
-				letter-spacing: -0.04em;
-				text-transform: uppercase;
-				height: 40px;
-				color: #7c0000;
-				padding: 0;
-				width: calc(100% - 20px);
-				max-width: 469px;
-				margin-top: 40px;
-				margin-bottom: 158px;
-			}
-
-			.white__btn-text {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				height: 40px;
-				width: 100%;
-				max-width: 300px;
-				color: #7c0000;
-				background-color: #fff;
-			}
-
 			@media (max-width: 768px) {
-				.white__btn {
-					margin-bottom: 100px;
-				}
-
-				.white__btn-text {
-					max-width: 260px;
+				body {
+					border-radius: 30px;
 				}
 
 				h1 {
@@ -188,32 +97,31 @@
 					padding: 20px;
 				}
 			}
+
+			.thanks .main__button {
+				max-width: 250px;
+				background-color: transparent;
+				border: 1px solid var(--text-color-dark);
+
+				&:hover {
+					background-color: var(--text-color-dark);
+					color: var(--page-bg);
+				}
+			}
 		</style>
 	</head>
 
-	<body>
+	<body class="thanks">
 		<div class="border_wrapper">
 			<div class="border">
 				<h1>THANKS FOR SUBMITTING!</h1>
 				<p>Your message has been sent.</p>
 			</div>
 		</div>
-		<a href="#!" class="white__btn">
-			<div class="bars_left">
-				<div class="bar bar_8"></div>
-				<div class="bar bar_7"></div>
-				<div class="bar bar_6"></div>
-				<div class="bar bar_5"></div>
-			</div>
-			<span class="white__btn-text">
-				go home
+		<a href="index.html" class="main__button secondary transparent">
+			<span class="main__button-text">
+				Go home
 			</span>
-			<div class="bars_right">
-				<div class="bar bar_1"></div>
-				<div class="bar bar_2"></div>
-				<div class="bar bar_3"></div>
-				<div class="bar bar_4"></div>
-			</div>
 		</a>
 	</body>
 </html>
