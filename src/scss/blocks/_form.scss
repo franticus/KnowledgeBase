@@ -18,6 +18,11 @@
 		white-space: nowrap;
 		margin-bottom: 40px;
 
+		@include tablet {
+			font-size: 70px;
+			margin-bottom: 20px;
+		}
+
 		@include mobile {
 			font-size: 35px;
 			margin-bottom: 20px;
