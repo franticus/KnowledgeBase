@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+export default function initReviewsSlider() {
   const wrapper = document.querySelector('.reviews .slide__wrapper');
   const prevBtn = document.querySelector('.reviews .slider__control--prev');
   const nextBtn = document.querySelector('.reviews .slider__control--next');
@@ -18,42 +18,39 @@ document.addEventListener('DOMContentLoaded', function() {
   track.appendChild(firstClone);
 
   track.style.transition = 'transform 0.6s ease';
-  Array.from(track.children).forEach(s => {
-    s.style.flex = '0 0 100%';
-  });
+  Array.from(track.children).forEach(s => (s.style.flex = '0 0 100%'));
 
   const REAL_COUNT = originalSlides.length;
   let index = 1;
   let locked = false;
 
-  function setTransition(enabled) {
-    track.style.transition = enabled ? 'transform 0.6s ease' : 'none';
-  }
-  function applyTransform() {
-    track.style.transform = 'translateX(' + -index * 100 + '%)';
-  }
+  const setTransition = enabled =>
+    (track.style.transition = enabled ? 'transform 0.6s ease' : 'none');
+
+  const applyTransform = () =>
+    (track.style.transform = 'translateX(' + -index * 100 + '%)');
 
   setTransition(false);
   applyTransform();
   requestAnimationFrame(() => setTransition(true));
 
-  function goNext() {
+  const goNext = () => {
     if (locked) return;
     locked = true;
     index += 1;
     applyTransform();
-  }
-  function goPrev() {
+  };
+  const goPrev = () => {
     if (locked) return;
     locked = true;
     index -= 1;
     applyTransform();
-  }
+  };
 
-  if (nextBtn) nextBtn.addEventListener('click', goNext);
-  if (prevBtn) prevBtn.addEventListener('click', goPrev);
+  nextBtn && nextBtn.addEventListener('click', goNext);
+  prevBtn && prevBtn.addEventListener('click', goPrev);
 
-  track.addEventListener('transitionend', function() {
+  track.addEventListener('transitionend', () => {
     if (index === REAL_COUNT + 1) {
       setTransition(false);
       index = 1;
@@ -62,14 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (index === 0) {
       setTransition(false);
-      index = REAL_COUNT; // прыжок на последний реальный
+      index = REAL_COUNT;
       applyTransform();
       requestAnimationFrame(() => setTransition(true));
     }
     locked = false;
   });
 
-  // (опционально) свайпы на тачах
   let startX = null;
   wrapper.addEventListener(
     'touchstart',
@@ -78,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     { passive: true }
   );
+
   wrapper.addEventListener('touchend', e => {
     if (startX == null) return;
     const dx = e.changedTouches[0].clientX - startX;
@@ -85,4 +82,4 @@ document.addEventListener('DOMContentLoaded', function() {
     if (Math.abs(dx) < 30) return;
     dx < 0 ? goNext() : goPrev();
   });
-});
+}

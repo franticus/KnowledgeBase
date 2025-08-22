@@ -12,6 +12,7 @@
 	padding-bottom: 0px;
 
 	@include mobile {
+		width: 100%;
 		padding: 30px 10px;
 		padding-bottom: 0px;
 		border-top-left-radius: 30px;
